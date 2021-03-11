@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Order.js render empty 1`] = `""`;
+
+exports[`Order.js render with data 1`] = `
+<div
+  className="Order"
+>
+  <div
+    className="Order-header"
+  >
+    <span
+      className="Order-shop"
+    >
+      test1
+    </span>
+    <span
+      id="date"
+    >
+      123
+    </span>
+  </div>
+  <div
+    className="Order-items"
+  />
+</div>
+`;
+
+exports[`Order.js render with data and items 1`] = `
+<div
+  className="Order"
+>
+  <div
+    className="Order-header"
+  >
+    <span
+      className="Order-shop"
+    >
+      test2
+    </span>
+    <span
+      id="date"
+    >
+      123
+    </span>
+  </div>
+  <div
+    className="Order-items"
+  >
+    <div
+      className="Order-item"
+      key="0"
+    >
+      item1
+    </div>
+    <div
+      className="Order-item"
+      key="1"
+    >
+      item2
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Order.js render without params 1`] = `""`;
