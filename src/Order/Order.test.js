@@ -1,3 +1,4 @@
+jest.mock('../utils/getDate')
 import React from 'react'
 import {configure, shallow} from "enzyme";
 import Adapter from 'enzyme-adapter-react-16';
@@ -7,7 +8,6 @@ import {fakeOrders} from "../data/fakeOrders";
 import toJson from "enzyme-to-json";
 
 
-jest.mock('../utils/getDate')
 const fakeDate = 123;
 configure({adapter: new Adapter()});
 
