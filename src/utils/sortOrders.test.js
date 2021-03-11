@@ -1,5 +1,5 @@
 import React from 'react'
-import {getSortFunction, sortByDate, sortByItemCount, sortOrders} from './sortOrders';
+import {getSortFunction, sortByDate, sortByItemCount, sortOrders, sortTypes} from './sortOrders';
 import {fakeOrders} from "../data/fakeOrders";
 
 describe('sortOrders function', () => {
@@ -24,11 +24,11 @@ describe('sortOrders function', () => {
 
 describe('getSortFunction function', () => {
     it ('func type is count', () => {
-        getSortFunction({COUNT: 'count'});
+        expect(getSortFunction(sortTypes.COUNT)).toBe(sortByItemCount);
     })
 
     it ('func type is date', () => {
-        getSortFunction({DATE: 'date'});
+        expect(getSortFunction(sortTypes.DATE)).toBe(sortByDate);
     })
 
     it('func has wrong type', () => {

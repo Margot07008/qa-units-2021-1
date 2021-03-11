@@ -15,22 +15,21 @@ configure({adapter: new Adapter()});
 describe('Order.js', () => {
 
     beforeEach(() => {
-        getDate.mockClear();
         getDate.mockReturnValue(fakeDate);
     });
 
-    afterAll(() => {
-        getDate.mockReset();
+    afterEach(() => {
+        jest.resetAllMocks();
     });
 
     it('render empty', () => {
         const wrapper = shallow(<Order/>);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.getElement()).toBeNull();
     });
 
     it('render without params', () => {
         const wrapper = shallow(<Order order={{}}/>);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.getElement()).toBeNull();
     });
 
     it('render with data', () => {
